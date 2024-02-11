@@ -1,14 +1,30 @@
-# This is a YAML file
+module.exports = {
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [
+                ".eslintrc.{js,cjs}"
+            ],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "quotes" : ["error", "double"]
+    }
 
-on: push
-jobs:
-  print-version:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - name: Print Node Version
-        run: node -v
+  }
+
 
