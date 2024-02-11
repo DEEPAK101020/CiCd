@@ -1,9 +1,9 @@
 # This is a YAML file
 
 on: push
-jobs:
-  first-job:
-  runs-on: ubuntu-latest
-  steps:
-    - run: node --version
-    - run: npm --version
+jobs: 
+    third-job:
+      runs-on : ubuntu-latest
+      steps : 
+            - run : node --version
+            - run : npm  --version
